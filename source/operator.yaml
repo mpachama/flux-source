@@ -1,10 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
-kind: GitRepository
+kind: HelmRepository
 metadata:
-  name: opensearch-operator
-  namespace: flux-system
+  name: opentelemetry-operator
+  namespace: default
 spec:
-  interval: 50s
-  ref:
-    branch: master  
-  url: https://github.com/open-telemetry/opentelemetry-operator.git
+  interval: 5m
+  url: 'https://github.com/open-telemetry/opentelemetry-helm-charts/tree/main/charts/opentelemetry-operator'
