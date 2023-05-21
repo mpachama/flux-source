@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: opensearch-operator
+  namespace: flux-system
+spec:
+  interval: 50s
+  ref:
+    branch: master  
+  url: https://github.com/open-telemetry/opentelemetry-operator.git
